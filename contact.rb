@@ -1,5 +1,5 @@
 class Contact
-	attr_acccessory :id, :first_name, :last_name, :email, :note
+	attr_acccessor :id, :first_name, :last_name, :email, :note
 
 	def initialize(first_name, last_name, email, note)
 		@first_name = first_name
