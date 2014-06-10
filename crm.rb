@@ -1,4 +1,5 @@
 require_relative 'contact'
+require_relative 'rolodex'
 require 'sinatra'
 
 get '/' do
@@ -17,7 +18,7 @@ end
 get '/contacts/new' do
 end
 
-get '/contacts/:id' do
+get '/contacts/:id' do 
 end
 
 get '/contacts/:id/edit' do
