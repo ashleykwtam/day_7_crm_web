@@ -3,7 +3,7 @@ require_relative 'rolodex'
 require 'sinatra'
 
 @@rolodex = Rolodex.new("hi")
-@@rolodex.add_contact(Contact.new("Bob", "Marley", "bobmar.msn.com", "cool dude"))
+@@rolodex.add_contact(Contact.new("Ash", "Tam", "temp@whatevs.com", "ok cool"))
 
 get '/' do
 	@crm_app_name = "Ash"
@@ -42,5 +42,20 @@ get '/contacts/:id/edit' do
 		raise Sinatra::NotFound
 	end
 end
+
+put '/contacts/:id' do
+	@contact = @@rolodex.find(params[:id].to_i)
+	if @contact
+		@contact.first_name = params[:first_name]
+		@contact.last_name = params[:last_name]
+		@contact.email = params[:email]
+		@contact.note = params[:note]
+
+		redirect to('/contacts')
+	else
+		raise Sinatra::NotFound
+	end
+end
+
 
 
