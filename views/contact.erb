@@ -2,8 +2,9 @@
 	<h1>List of Contacts:</h1>
 	<ul>
 		<% @@rolodex.contacts.each do |contact| %>
-			<li><%= contact.first_name + ' ' + contact.last_name %></li>
+			<li><a href="/contacts/<%= contact.id %>"><%= contact.first_name + ' ' + contact.last_name %></a></li>
 		<% end %>
   </ul>
+
   	<a href="/contacts/new">Add Another Contact</a>
   	<a href="/">Return to Main Menu</a>
