@@ -27,7 +27,7 @@ end
 
 get '/contacts' do
 	@contacts = Contact.all
-	erb :contacts
+	erb :contact
 end
 
 get '/contacts/new' do
@@ -46,7 +46,7 @@ end
 
 
 get '/contacts/:id' do 
-	@contact = @@rolodex.find(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :show_contact
 	else
