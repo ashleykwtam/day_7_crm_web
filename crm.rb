@@ -36,9 +36,9 @@ end
 
 post '/contacts' do
 	contact = Contact.create(
-		:first_name => params[:first_name]
-		:last_name => params[:last_name]
-		:email => params[:email]
+		:first_name => params[:first_name],
+		:last_name => params[:last_name],
+		:email => params[:email],
 		:note => params[:note]
 	)
 	redirect to('/contacts')
