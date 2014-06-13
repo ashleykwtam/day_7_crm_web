@@ -1,14 +1,16 @@
-html {
+/*html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+}*/
+
+h1, h2, h3, h4, h5, h6, p, a, header, footer, ul, li {
+	font-color: blue;
+	font-size: 20px;
 }
-header h1{
-	font-color: green;
-	font-size: 30px;
-}
+
 body {
   margin: 0;
   font-family: helvetica;
-  font-color: #4eb466;
+/*  font-color: #4eb466;*/
 }
